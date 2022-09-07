@@ -1,5 +1,5 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% clean evn
+% clean env
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 close all;
 clear;
@@ -51,7 +51,7 @@ var_2_norm = chol(var_2_mat);
 lam = sqrt(2/alpha) * ones(2,1);
 u_p = zeros(4,1);
 
-%cvx_solver gurobi
+cvx_solver mosek
 tic
 for i = 1:50
     
