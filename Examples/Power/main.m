@@ -110,7 +110,7 @@ end
 alphas = [0.84:.01:0.99];
 figure()
 hold on
-plot(alphas, our_cost, '-o', 'DisplayName','Proposed Method')
+plot(alphas(1:end-1), our_cost(1:end-1), '-o', 'DisplayName','Proposed Method')
 plot(alphas, scp_cost, '-s', 'DisplayName','Scenario Approach')
 xlabel("Safety probability, $1-\alpha$", 'interpreter', 'latex')
 ylabel("Cost, in dollars", 'interpreter', 'latex')
@@ -118,7 +118,7 @@ legend('location', 'northwest', 'interpreter', 'latex')
 hold off
 figure()
 hold on
-plot(alphas, our_time, '-o', 'DisplayName','Proposed Method')
+plot(alphas(1:end-1), our_time(1:end-1), '-o', 'DisplayName','Proposed Method')
 plot(alphas, scp_time, '-s', 'DisplayName','Scenario Approach')
 xlabel("Safety probability, $1-\alpha$", 'interpreter', 'latex')
 ylabel("Time to solve, in seconds", 'interpreter', 'latex')
